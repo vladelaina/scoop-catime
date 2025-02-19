@@ -12,5 +12,10 @@
     "$lnk.TargetPath = \"$dir\\catime_1.0.3.1.exe\"",
     "$lnk.IconLocation = \"$dir\\catime_1.0.3.1.exe, 0\"",
     "$lnk.Save()"
+  ],
+  "post_uninstall": [
+    "$desktop = [System.Environment]::GetFolderPath('Desktop')",
+    "$shortcutPath = Join-Path $desktop 'Catime.lnk'",
+    "if (Test-Path $shortcutPath) { Remove-Item $shortcutPath -Force }"
   ]
 }
