@@ -5,6 +5,7 @@
   "hash": "7be4e30cf5924520ac28bd06399d524877f718c2f7367f5e765c54d5f93d6397",
   "description": "A simple timer application.",
   "homepage": "https://github.com/vladelaina/Catime",
+  "license": "Apache-2.0",
   "post_install": [
     "$desktop = [System.Environment]::GetFolderPath('Desktop')",
     "Copy-Item \"$dir\\catime_1.0.3.1.exe\" -Destination $desktop -Force",
