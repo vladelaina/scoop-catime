@@ -6,16 +6,13 @@
   "description": "A simple timer application.",
   "homepage": "https://github.com/vladelaina/Catime",
   "post_install": [
-    "$shortcut = New-Object -ComObject WScript.Shell",
     "$desktop = [System.Environment]::GetFolderPath('Desktop')",
-    "$lnk = $shortcut.CreateShortcut(\"$desktop\\Catime.lnk\")",
-    "$lnk.TargetPath = \"$dir\\catime_1.0.3.1.exe\"",
-    "$lnk.IconLocation = \"$dir\\catime_1.0.3.1.exe, 0\"",
-    "$lnk.Save()"
+    "$exePath = Join-Path $env:USERPROFILE Desktop 'catime_1.0.3.1.exe'",
+    "Copy-Item \"$dir\\catime_1.0.3.1.exe\" -Destination $desktop -Force"
   ],
   "post_uninstall": [
     "$desktop = [System.Environment]::GetFolderPath('Desktop')",
-    "$shortcutPath = Join-Path $desktop 'Catime.lnk'",
-    "if (Test-Path $shortcutPath) { Remove-Item $shortcutPath -Force }"
+    "$exePath = Join-Path $desktop 'catime_1.0.3.1.exe'",
+    "if (Test-Path $exePath) { Remove-Item $exePath -Force }"
   ]
 }
