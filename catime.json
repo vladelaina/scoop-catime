@@ -1,0 +1,8 @@
+{
+  "version": "1.0.3.1",
+  "url": "https://github.com/vladelaina/Catime/releases/download/v1.0.3.1/catime_1.0.3.1.exe",
+  "bin": "catime_1.0.3.1.exe",
+  "hash": "7be4e30cf5924520ac28bd06399d524877f718c2f7367f5e765c54d5f93d6397",
+  "description": "A simple timer application.",
+  "homepage": "https://github.com/vladelaina/Catime"
+}
