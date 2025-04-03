@@ -8,7 +8,7 @@
   "license": "Apache-2.0",
   "post_install": [
     "$desktop = [System.Environment]::GetFolderPath('Desktop')",
-    "Copy-Item \"$dir\\catime_1.0.5exe\" -Destination $desktop -Force",
+    "Copy-Item \"$dir\\catime_1.0.5.exe\" -Destination $desktop -Force",
     "Remove-Item \"$dir\\*\" -Force -Recurse"
   ],
   "post_uninstall": [
